@@ -63,6 +63,7 @@ public class ProductsREST {
 		if (optionalProduct.isPresent()) {
 			Product updateProduct = optionalProduct.get();
 			updateProduct.setName(product.getName());
+			updateProduct.setReferencia(product.getReferencia());
 			productDAO.save(updateProduct);
 			return ResponseEntity.ok(updateProduct);
 		}else {
